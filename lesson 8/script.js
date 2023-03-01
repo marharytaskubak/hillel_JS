@@ -40,24 +40,27 @@
 
 // 3. Написати функцію заповнення даними користувача двомірного масиву. Довжину основного масиву і внутрішніх масивів задає користувач. Значення всіх елементів всіх масивів задає користувач.
 
-// let main = []
-// main.length = prompt('число')
-// let i = 0
+let main = []
+main.length = prompt('число')
+let i = 0
 
-// function fill(main){
-//     i += 1;
-//     let second = []
-//     second.length = prompt('число')
-//     let a = 0;
-//     function fill2(second){
-//         a += 1;
-//         let num = prompt('значення всіх елементів') 
-//         second.fill(num)
-//     }
-//     fill2(second);
-//     console.log(main.fill(second));
-// }
-// fill(main);
+function fill(main){
+    i += 1;
+    let second = []
+    second.length = prompt('число')
+    let a = 0;
+    
+    function fill2(second){
+        a += 1;
+        for(let num = 0; num < second.length; num++){
+            num = prompt('значення всіх елементів') 
+            second.fill(num)
+        }  
+    }
+    fill2(second);
+    console.log(main.fill(second));
+}
+fill(main);
 
 
 // 4. Створити функцію, яка прибирає з рядка всі символи, які ми передали після другого аргумента. 'func("hello world", 'l', 'd')' поверне нам "heo wor". Вихідний рядок та символи для видалення задає користувач.
